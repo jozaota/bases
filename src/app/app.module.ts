@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AcumulardorComponent } from './acumulardor/acumulardor.component';
 import { EmpleadosModule } from './empleados/empleados.module';
+import { ClientesModule } from './clientes/clientes.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EmpleadosModule } from './empleados/empleados.module';
   ],
   imports: [
     BrowserModule,
-    EmpleadosModule
+    EmpleadosModule,
+    ClientesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

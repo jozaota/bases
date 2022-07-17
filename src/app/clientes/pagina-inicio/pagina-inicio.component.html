@@ -1,1 +1,37 @@
-<p>pagina-inicio works!</p>
+
+<h1>Listado de Clientes</h1>
+
+<div class="row">
+    <div class="col">
+        <h3>Clientes</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let c of cliente">
+                {{c.nombre}} - {{c.credito | number}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h3>Agregar</h3>
+        <hr>
+
+        <form (submit)="agregar()">
+            <input
+                type="text"
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)] = "nuevo.nombre"
+            />
+            <input
+                type="number"
+                placeholder="Credito"
+                name="credito"
+                [(ngModel)] = "nuevo.credito"
+            />
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+    </div>
+</div>
