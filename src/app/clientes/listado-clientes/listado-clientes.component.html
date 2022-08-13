@@ -1,1 +1,8 @@
-<p>listado-clientes works!</p>
+<h3>Clientes</h3>
+<hr>
+<ul>
+    <li *ngFor="let c of cliente">
+        {{c.nombre}} - {{c.credito | number}}
+    </li>
+</ul>
+

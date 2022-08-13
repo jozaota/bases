@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICliente } from '../interfaces/clientes';
 
 @Component({
   selector: 'app-listado-clientes',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado-clientes.component.css']
 })
 export class ListadoClientesComponent implements OnInit {
+
+  @Input()
+  cliente: ICliente[] = [];
 
   constructor() { }
 
